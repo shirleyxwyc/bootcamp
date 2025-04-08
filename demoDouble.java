@@ -25,8 +25,19 @@ public class demoDouble {
     //double/int must be double
      double score3 = 71.0;
      int score4 = 82;
-     double averageScore2 = (score3 + score4)/2;
+     double averageScore2 = (score3 + score4)/2; //76.5
      System.out.println(averageScore2);
+
+     //divide by zero
+     //double r3 = 10 / 0;-->undefined
+     //System.out.println(r3);
+
+     double r4 = 0 / 10;
+     System.out.println(r4); //0
+
+
+
+
 
 
 
