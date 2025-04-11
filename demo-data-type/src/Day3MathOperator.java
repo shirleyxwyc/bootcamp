@@ -40,6 +40,7 @@ public class Day3MathOperator {
     }
     System.out.println("there are "+countEven +" Even Numbers between 0-9.");
     
+    //count if 10 is an Even number
     int countOnce = 0;
     int s = 10; 
     if(s % 2 == 0){ //10%2=0, true-->countOnce+1-->0+1=1
@@ -49,12 +50,12 @@ public class Day3MathOperator {
 
     // Count number of odd number between 0 - 9, 1,3,5,7,9 //! don't forget to include 9, i<=9
     int countOdd = 0;
-    for(int i = 0; i <= 9; i++) {
-      if(i % 2 != 0) {
+    for(int i = 0; i <= 9; i++) {//counting from 0 to 9(when i reached the i<=9 condition then stop counting)
+      if(i % 2 != 0) {// at the same time 1%2 != 0(when i is an odd no, countOdd variable will be counted and accumulated.until when i reached the i<=9 condition then stop counting as well)
         countOdd++;
               }
     }
-    System.out.println("there are "+countOdd +" Odd Numbers between 0-9.");
+    System.out.println("there are "+countOdd +" Odd Numbers between 0-9."); // print the final countOdd variable outside the for block code{}.
 
 
 //! comparing largest or smallest in a range of numbers, the best way is to declare a int variable min or max, and then use the min or max to compare other numbers    
