@@ -9,9 +9,9 @@ public class DemoWhileloop {
     //For Loop( initilization, )
     //While loop
     int k = 0;
-    System.out.println("hello-w");
         while(k<3){
           k++;
+          System.out.println("hello-w");
     }
 
     //Do while loop
