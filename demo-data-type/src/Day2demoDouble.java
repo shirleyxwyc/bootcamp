@@ -1,4 +1,4 @@
-public class demoDouble {
+public class Day2demoDouble {
    public static void main(String[]args){
 
     int x = 9;
@@ -13,7 +13,7 @@ public class demoDouble {
      double amount=price * quantity;
      System.out.println(amount);
 
-     //int/int must be an int
+     //!int/int must be an int
      double w = 10/3;
      System.out.println(w);
 
@@ -22,14 +22,14 @@ public class demoDouble {
      double averageScore = (score1 + score2)/2;
      System.out.println(averageScore);
 
-    //double/int must be double
+    //!double/int must be double
      double score3 = 71.0;
      int score4 = 82;
      double averageScore2 = (score3 + score4)/2; //76.5
      System.out.println(averageScore2);
 
      //divide by zero
-     //double r3 = 10 / 0;-->undefined
+     //!double r3 = 10 / 0;-->undefined
      //System.out.println(r3);
 
      double r4 = 0 / 10;

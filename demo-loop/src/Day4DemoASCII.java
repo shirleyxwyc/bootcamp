@@ -28,6 +28,10 @@ public class Day4DemoASCII {
 System.out.println(letter + "-->" + (i-'a'+1));
     }
 
+    char zero = '0';
+    int asciiCode = (int)zero;
+    System.out.println(asciiCode);//48 (i.e., 0 is 48 in ASCII)
+
 
   }
 }

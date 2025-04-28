@@ -32,6 +32,41 @@ public class Day3MathOperator {
     a /= 2;
     System.out.println("a="+a);//a=6
 
+    //!Pre-increment ++u, and Post-increment u++
+    
+    int u =5;
+    int preIncrement = ++u;
+    System.out.println("u =" +u); //6
+    System.out.println("preIncrement =" +preIncrement);//6
+
+    int v =5;
+    int postIncrement = v++;
+    System.out.println("v =" +v); //v=6
+    System.out.println("postIncrement =" +postIncrement);//postIncrement =5
+
+    //!Challenge
+    int e= 3;
+    int f = (e++ + 3) * e++; 
+    //Step 1: (e++ +3) ->(3+3)=6,（）執行後e自增， e變成3+1=4,e=4
+    //Step 2:6*e=6*4=24, 6*4執行後e自增,e變成5+1=5,e=5
+    System.out.println(f);//24
+    System.out.println(e);//5
+
+    int h = 10;
+    int j = 20;
+    int result2 = ++h + j++;
+    System.out.println("result2 = "+ result2); //result2=11+20=31
+    System.out.println("h = "+h); //h=11
+    System.out.println("j = "+j);//j=21
+
+
+
+    //!Logical Operator eavaluate from left to right:
+    boolean result = true && false || true;
+    System.out.println(result);//true
+
+
+
     // Count number of even number between 0 - 9, 0,2,4,6,8--> there are 5 Even Numbers between 0-9.
     int countEven = 0;
     for(int i = 0; i <= 9; i++){

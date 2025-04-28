@@ -99,8 +99,15 @@ public class Day3DemoIf {
       System.out.println("no");
     }
 
-    // Question: Find the middle char of the string
+    // !Question: Find the middle char of the string
     // abcde -> c (5 / 2 -> 2)
+    String s10="abcde";
+    System.out.println("s10 length /2 = "+s10.length()/2);//5/2=2-->'c'
+    System.out.println("the middle char of abcde is " +s10.charAt(s10.length()/2));
+    String s11="abcd";
+    System.out.println("s11 length /2-1 = " + (s11.length()/2-1)); //4/2-1=1-->'b'
+
+
     // a -> a (1 / 2 -> 0)
 
     // abcd -> b (4 / 2 -> 2)
@@ -111,7 +118,7 @@ public class Day3DemoIf {
       System.out.println(s3.charAt(s3.length() / 2));
     } else { // even length
       System.out.println(s3.charAt(s3.length() / 2 - 1));
-    }
+    }//'b'
 
     // odd number
     int x5 = 10;

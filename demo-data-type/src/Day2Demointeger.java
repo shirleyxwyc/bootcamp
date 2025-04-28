@@ -1,4 +1,4 @@
-public class Demointeger {
+public class Day2Demointeger {
     public static void main(String[] args){
         //assign 3 into an integer x  
         int x=3;

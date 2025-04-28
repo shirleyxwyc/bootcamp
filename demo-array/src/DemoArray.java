@@ -16,15 +16,18 @@ public class DemoArray {
     arr[1]=4;
     arr[2]=-7;
     
+    
+    
+
 
 
     //question:
-    int[] box2 =new int[5];
-    box2[0]=10;
-    box2[1]=7;
-    box2[2]=4;
-    box2[3]=-100;
-    box2[4]=6;
+    //int[] box2 =new int[5];
+    //box2[0]=10;
+    //box2[1]=7;
+    //box2[2]=4;
+    //box2[3]=-100;
+    //box2[4]=6;
 
     //Question: double array with size 4
     //assign 4 double values into the array
@@ -37,7 +40,7 @@ public class DemoArray {
 
     //read
     System.out.println(boxD[0]);//-4.2
-    System.out.println(box2[3]);
+    //System.out.println(box2[3]);
 
     double amount =99.9;
     boxD[3] = amount;
@@ -50,6 +53,49 @@ public class DemoArray {
     s1[1]="Peter";
     s1[2]="Alice";
     System.out.println(s1[2]);
+
+    //double array for loop + print out values
+    double [] amounts = new double [6];
+    amounts [0]= 10.9;
+    amounts [3]= 14.1;
+    amounts [5]= 99.9;
+    
+    for (int i=0; i>amounts.length; i++) {
+      System.out.println(amounts[i]);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    }
 
     
 
