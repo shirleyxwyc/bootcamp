@@ -10,7 +10,7 @@ public class Circle {
 private double radius;
 private String color;
 
-//Creating Presenration Method--> //!setting the value of member variable and no return needed-> use void
+//Creating Presentation Method--> //!setting the value of member variable and no return needed-> use void
 //public void setXxx(String xxx) {//!method:use lower camel case,i.e setName
     //this.xxx = xxx;
 //}

@@ -5,7 +5,7 @@ public class Queue {
   private Person[] persons; // instance variable.
 
   // Constructor
-  // Wong ->public Person[] (){//!constructor name must match the class name, which is Queue.
+  // Wrong ->public Person[] (){//!constructor name must match the class name, which is Queue.
   // wrong ->Person[] persons = new Person[0]; //! 'persons' is a local variable not instance variable. use "this.persons" instead
   // !This creates a NEW local variable "persons", NOT the instance variable!
 

@@ -9,16 +9,17 @@ public class DemoWrapper {
     double d = 3.14d;
     char c = 'a';
     boolean b2 = true;
-    
+
     // Wrapper Class of char
     Character c1 = Character.valueOf('a');
     System.out.println(c1); // a
     char c0 = c1.charValue();
-    System.out.println(c0);//a
+    System.out.println(c0);// a
 
     System.out.println(c1.compareTo(Character.valueOf('c'))); // -2 'a'-'c'=-2
     System.out.println(Character.valueOf('c').compareTo(c1)); // 2 'c'-'a'=2
-    System.out.println(Character.valueOf('c').compareTo(Character.valueOf('c'))); // 0
+    System.out
+        .println(Character.valueOf('c').compareTo(Character.valueOf('c'))); // 0
 
     // Wrapper Class of boolean
     Boolean b3 = Boolean.valueOf(true);
@@ -39,7 +40,7 @@ public class DemoWrapper {
     // ! Autoboxing (Only for the pair of primitive and wrapper class)
     // int value -> Integer variable
     Integer i2 = 2;
-    
+
     // int -> long (safe conversion)
     long l3 = 2;
 
@@ -51,22 +52,32 @@ public class DemoWrapper {
 
     // ! Unboxing
     int i4 = Integer.valueOf(10);
-    // int i5 = Long.valueOf(10L);
-    long i5 = Long.valueOf(10L);
-    
-    // Long -> long -> int -> (autobox) Integer
-    Integer i6 = (int) ((long) Long.valueOf(10L));
+    // int i5 = Long.valueOf(10L); //-NOT OK return type of Long.valueOf(10L) is Long Object,Long Object can not be assigned to int i5 (primitive variable
+    int i5 = Long.valueOf(10L).intValue(); // OK return type of intValue() is an int
+    long i11 = Long.valueOf(10L);
 
-    // ! compareTo()
+    //! Long -> long -> int -> (autobox) Integer
+    Integer i6 = (int) ((long) Long.valueOf(10L));
+    //Explaination:
+    // Long.valueOf(10L) creates a Long object.
+    // (long) converts the Long object to a primitive long.
+    // (int) then converts the long to a primitive int.
+    // assigning this primitive int to i6, Java performs autoboxing, converting the int to an Integer.
+
+    // ! compareTo() for Integer Comparison return -1,1 and 0 ONLY
     int age = 102;
     // ! Integer never use >, <, >=, <=, We should use compareTo for comparison
     System.out.println(Integer.valueOf(100).compareTo(Integer.valueOf(age))); // -1 (right is larger)
     System.out.println(Integer.valueOf(102).compareTo(Integer.valueOf(age))); // 0
 
     // unboxing for Math operation (int - int -> int)
+    // When you use the - operator, Java automatically converts these Integer objects to their corresponding primitive int values.
+    // This process is called unboxing.
     int diff = Integer.valueOf(100) - Integer.valueOf(age);
     System.out.println(diff); // -2
 
+
+    // ! compareTo() for String Comparison lexicographically (dictionary order).
     String s10 = "abcd";
     String s11 = "bcde";
     System.out.println(s11.compareTo(s10)); // 1 (compare first char, b - a)
@@ -77,13 +88,22 @@ public class DemoWrapper {
     System.out.println(s13.compareTo(s12)); // 1 (d - c)
 
     String s14 = "Abcd";
-    System.out.println(s14.compareTo(s10)); // -32 (A - a)
+    System.out.println(s14.compareTo(s10)); // -32 (A - a) 65-97=-32->ASCII Code of 'A'= 65, ASCII Code od 'a'= 97
     String s16 = "Abcde";
-    System.out.println(s14.compareTo(s16)); // -1 
+    System.out.println(s14.compareTo(s16)); // -1
+
+
+    String s18="car";//'r' (Unicode 114)
+    String s19 ="cat"; //'t' (Unicode 116).
+    System.out.println("s18.compareTo(s19) :"+ s18.compareTo(s19));//-2  =114-116
 
     String name = "John";
+    // if (name.equals("John") == false) {
     if (!name.equals("John")) {
       // do something
+      System.out.println("Not John");
+    } else { //
+      System.out.println("John"); // John
     }
 
 

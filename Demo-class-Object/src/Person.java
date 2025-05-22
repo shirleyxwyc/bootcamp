@@ -52,9 +52,7 @@ public class Person {
   }
 
   // Method
-  public String toString() {
-    return "Name: " + name + " Height : " + height + " Weight: " + weight;
-  }
+  
 
   // getBMI Method->BMI = weight/height * height; (BMI = kg/m2;)
   public double getBMI() {
@@ -105,7 +103,14 @@ public class Person {
      return "Obese";
     }
   }
+public boolean equals(Person person) {
+  return this.height == person.getHeight()
+  && this.weight==person.getWeight();
+}
 
+public String toString() {
+  return "Name: " + this.name + " Height : " + this.height + " Weight: " + this.weight;
+}
 
 
   public static void main(String[] args) {
@@ -136,6 +141,10 @@ public class Person {
     System.out.println(getBMI2(1.76, 80.0));//25.83
     System.out.println(getBMIStatus2(1.76, 80.0));//Overweight
 
+    //you prepared the toString() method
+    System.out.println(p3.toString());//Name: Peter Height : 1.8 Weight: 77.0
+    System.out.println(p3);//Name: Peter Height : 1.8 Weight: 77.0
+    System.out.println(p2.equals(p3));//false
 
 
   }
